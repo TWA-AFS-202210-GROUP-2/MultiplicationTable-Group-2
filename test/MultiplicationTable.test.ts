@@ -26,4 +26,17 @@ describe('Multiplication Table', () => {
     //then
     expect(rendered).toBe('1*1=1  \n2*1=2  2*2=4  \n')
   })
+
+  it('should render null', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 4
+    const end = 2
+
+    //when
+    const rendered = table.render(start, end)
+
+    //then
+    expect(rendered).toBe('')
+  })
 })

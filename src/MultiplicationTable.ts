@@ -22,12 +22,12 @@ export class MultiplicationTable {
     return num<=10&&num>=1
   }
 
-  private getResult(start:number,end:number){
+  private getResult(start:number,end:number):string{
     let result = ''
     let i = start
     let j = start
     while(i<=end){
-      result = result+i.toString()+'*'+j.toString()+'='+(i*j).toString()+'  '
+      result = result+this.caculate(i,j)
       j=j+1
       if(j>i){
         result = result+'\n'
@@ -36,5 +36,9 @@ export class MultiplicationTable {
       }
     }
     return result
+  }
+
+  private caculate(i:number,j:number):string{
+    return i.toString()+'*'+j.toString()+'='+(i*j).toString()+'  '
   }
 }

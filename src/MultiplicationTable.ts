@@ -7,12 +7,16 @@ export class MultiplicationTable {
 }
 
 export function render(start:number,end:number):string{
-  if(isGreaterthan(start,end) && isInRange(start) && isInRange(end)){
+  if(isValid(start,end)){
     return getResult(start,end)
   }
   else{
     return ''
   }
+}
+
+function isValid(start:number,end:number):boolean{
+  return isGreaterthan(start,end) && isInRange(start) && isInRange(end)
 }
 
 function isGreaterthan(start:number,end:number):boolean{
@@ -28,7 +32,7 @@ function getResult(start:number,end:number){
   let i = start
   let j = start
   while(i<=end){
-    result = result+i.toString+'*'+j.toString+'='+(i*j).toString+'  '
+    result = result+i.toString()+'*'+j.toString()+'='+(i*j).toString()+'  '
     j=j+1
     if(j>i){
       result = result+'\n'

@@ -39,6 +39,6 @@ export class MultiplicationTable {
   }
 
   private caculate(i:number,j:number):string{
-    return i.toString()+'*'+j.toString()+'='+(i*j).toString()+'  '
+    return j.toString()+'*'+i.toString()+'='+(i*j).toString()+'  '
   }
 }

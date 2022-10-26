@@ -19,7 +19,7 @@ export class MultiplicationTable {
   }
 
   private isInRange(num:number):boolean{
-    return num<=10&&num>=1
+    return num<=10&&num>=1&&Math.floor(num)===num
   }
 
   private getResult(start:number,end:number):string{

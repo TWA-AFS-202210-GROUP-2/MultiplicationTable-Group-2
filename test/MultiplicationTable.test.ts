@@ -40,7 +40,7 @@ describe('Multiplication Table', () => {
     expect(rendered).toBe('')
   })
 
-  it('should render null', () => {
+  it('should render return null', () => {
     // given
     const table = new MultiplicationTable()
     const start = 4
